@@ -11,4 +11,6 @@ public interface SetmealDishMapper {
     List<Long> getSetmealIdByDishIds(List<Long> dishIds);
 
     void insertBatch(List<SetmealDish> setmealDishes);
+
+    void deleteBatchBySetmealId(List<Long> setmealIds);
 }

@@ -56,4 +56,5 @@ public interface DishMapper {
      * @param dish
      */
     List<Dish> list(Dish dish);
+
 }
