@@ -87,4 +87,16 @@ public class SetmealServiceImpl implements SetmealService {
         // 删除套餐中菜品关联数据
         setmealDishMapper.deleteBatchBySetmealId(ids);
     }
+
+    @Override
+    public SetmealVO getByIdWithDish(Integer id) {
+        // 查询对应的套餐
+        Setmeal setmeal = setmealMapper.getById(id);
+        // 查询套餐包含的菜品
+        List<SetmealDish> setmealDishList = setmealDishMapper.getBySetmealId(id);
+        SetmealVO setmealVO = new SetmealVO();
+        BeanUtils.copyProperties(setmeal,setmealVO);
+        setmealVO.setSetmealDishes(setmealDishList);
+        return setmealVO;
+    }
 }

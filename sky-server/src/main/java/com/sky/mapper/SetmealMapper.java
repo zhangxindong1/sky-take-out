@@ -33,4 +33,7 @@ public interface SetmealMapper {
     List<Setmeal> queryOnSale(List<Long> ids);
 
     void deleteBatchById(List<Long> setmealIds);
+
+    @Select("select * from setmeal where id = #{id}")
+    Setmeal getById(Integer id);
 }
