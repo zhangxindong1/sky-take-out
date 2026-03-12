@@ -93,7 +93,7 @@ public class SetmealServiceImpl implements SetmealService {
     }
 
     @Override
-    public SetmealVO getByIdWithDish(Integer id) {
+    public SetmealVO getByIdWithDish(Long id) {
         // 查询对应的套餐
         Setmeal setmeal = setmealMapper.getById(id);
         // 查询套餐包含的菜品

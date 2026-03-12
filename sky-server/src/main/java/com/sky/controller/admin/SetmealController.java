@@ -51,7 +51,7 @@ public class SetmealController {
 
     @GetMapping("/{id}")
     @ApiOperation("根据id查询套餐用于回显页面")
-    public Result<SetmealVO> getById(@PathVariable Integer id){
+    public Result<SetmealVO> getById(@PathVariable Long id){
         SetmealVO setmealVO = setmealService.getByIdWithDish(id);
         return Result.success(setmealVO);
     }
