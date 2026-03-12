@@ -156,6 +156,7 @@ public class SetmealServiceImpl implements SetmealService {
      * @return
      */
     public List<Setmeal> list(Setmeal setmeal) {
+        log.info("使用的数据库");
         List<Setmeal> list = setmealMapper.list(setmeal);
         return list;
     }
